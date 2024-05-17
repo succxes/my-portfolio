@@ -312,19 +312,257 @@ footer {
   
   /* Responsive Footer */
   @media screen and (max-width: 768px) {
-	.footer {
-	  flex-direction: column;
-	  align-items: center;
-	}
-  
-	.left,
-	.right {
-	  text-align: center;
-	  margin-bottom: 10px;
-	}
-  
-	.socials {
-	  margin-bottom: 10px;
-	}
-  }
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.tch {
+    background-color: #e52e05;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+
+.tch:hover {
+    transform: scale(1.1);
+}
+
+/* Main Content Styles */
+.main {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../thumbnails/back.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.newslatter form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.newslatter form input:first-child {
+    width: calc(100% - 120px);
+    padding: 14px 15px;
+    border: 2px solid #e52e05;
+    border-radius: 30px;
+    outline: none;
+}
+
+.newslatter form input:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e52e05;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* About Section Styles */
+.about {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.about img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Service Section Styles */
+.service {
+    background-color: #101010;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.title h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    flex: 0 0 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+    padding: 20px 35px;
+    background-color: #191919;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card i {
+    font-size: 3rem;
+    color: #e52e05;
+    margin-bottom: 20px;
+}
+
+.pra p {
+    color: #e52e05;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.card .button {
+    background-color: #e52e05;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+.card .button:hover {
+    background-color: transparent;
+    border: 2px solid #e52e05;
+}
+
+/* Contact Section Styles */
+.contact-me {
+    background-color: dimgray;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.button-two {
+    background-color: #e52e05;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: .4s;
+}
+
+.button-two:hover {
+    background-color: transparent;
+    border: 2px solid #e52e05;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(52, 52, 52);
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.socials a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e52e05;
+}
+}
   
